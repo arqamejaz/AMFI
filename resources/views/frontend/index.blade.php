@@ -68,7 +68,7 @@
                                 <li><a href="#services">Services</a></li>
                                 <li><a href="#roadmap">Roadmap</a></li>
                                 <li><a href="{{ url('frontend/img/pitchdeck.pdf') }}" target="_blank">Pitch Deck</a></li>
-                                <li><a href="#whitepaper">White Paper</a></li>
+                                <li><a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper">White Paper</a></li>
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
 
@@ -121,7 +121,7 @@
                                 finance. Experience the power of AI, Metaverse and decentralized finance all in one
                                 platform.</p>
                             <div class="dream-btn-group wow fadeInUp mb-30" data-wow-delay="0.4s">
-                                <a href="#" class="btn dream-btn mr-3">White Paper</a>
+                                <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper " class="btn dream-btn mr-3">White Paper</a>
                                 <a href="{{ url('frontend/img/pitchdeck.pdf') }}" class="btn dream-btn" target="_blank">Pitch Deck</a>
                             </div>
                         </div>
@@ -1827,8 +1827,8 @@
             </div>
             <div class="col-6 mt-2">
                 <p class="text-center">
-                    <a href="" >Privacy Policy</a>
-                    <a href="" class="pl-5">Terms & Conditions</a>
+                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper">Privacy Policy</a>
+                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper" class="pl-5">Terms & Conditions</a>
                 </p>
             </div>
         </div>
