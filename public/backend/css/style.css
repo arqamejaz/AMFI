@@ -1,0 +1,11 @@
+.bg-theme
+{
+  background-image: linear-gradient(to bottom right,#766ee6 0,#3540b0);
+}
+.bg-theme2
+{
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+}
+
