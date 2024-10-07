@@ -24,7 +24,7 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         }
         // console.log(window.ethereum.request())
 
-        const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
 
         const formattedAmount = Number(tAmount).toFixed(18);

@@ -4,12 +4,18 @@ import { ThirdwebProvider, ConnectButton, ConnectEmbed , darkTheme, useNetworkSw
 // import { sepolia, lineaSepolia  } from "thirdweb/chains"
 // import { polygon } from "thirdweb/chains"
 import { ethereum, bsc, polygon } from "thirdweb/chains"
-import { createWallet, inAppWallet } from "thirdweb/wallets";
+import { createWallet, injectedProvider } from "thirdweb/wallets";
 import { TransactionModal } from './TransactionModal'
 import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
 import { SassColor } from "sass";
 import { currencyApprovedForListingEvent } from "thirdweb/extensions/marketplace";
+
+const metamaskProvider = injectedProvider("io.metamask");
+
+if (metamaskProvider) {
+    console.log("Metamask is installed");
+  }
 
 // Initialize Thirdweb Client with your client ID
 const client = createThirdwebClient({
@@ -29,7 +35,7 @@ const wallets = [
 //Get live rates of currencies
 const getLiveRates = async (currency) => {
     try {
-        const response = await fetch(`http://127.0.0.1:8000/api/crypto-price/${currency}`);
+        const response = await fetch(`/api/crypto-price/${currency}`);
         const data = await response.json();
         console.log(data.data[currency].quote.USD.price);
         return data.data[currency].quote.USD.price; // Extract price from the response
