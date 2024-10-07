@@ -2,6 +2,8 @@ import { useState } from "react";
 import { createPortal } from "react-dom"
 import { ethers } from "ethers";
 import { useNavigate } from "react-router-dom";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+
 
 export const TransactionModal = ({ address, tAmount, currency }) => {
     const [transactionHash, setTransactionHash] = useState(null);
@@ -24,9 +26,31 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         }
         // console.log(window.ethereum.request())
 
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
+        let provider;
 
+        // Set up provider depending on whether MetaMask or WalletConnect is available
+        if (typeof window.ethereum !== "undefined") {
+          // Web3 provider exists (MetaMask or other browser extensions)
+          provider = new ethers.providers.Web3Provider(window.ethereum);
+        } else {
+          // Fallback to WalletConnect
+          const wcProvider = new WalletConnectProvider({
+            infuraId: "223131ba87834950b982135c0e236c26", // Replace with your Infura project ID
+          });
+
+          try {
+            // Enable WalletConnect provider
+            await wcProvider.enable();
+            provider = new ethers.providers.Web3Provider(wcProvider);
+          } catch (error) {
+            console.error("Failed to connect to WalletConnect", error);
+            return;
+          }
+        }
+
+
+        // const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
         const formattedAmount = Number(tAmount).toFixed(18);
         let transaction;
         const recipient = "0x143c5eC14522d150F4F5E1ddCA7E90BA42dbD438"; // Replace with actual recipient address
@@ -51,24 +75,6 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         }
 
         try {
-            // const tokenDetails = {
-            //     type: 'ERC20', // Token standard
-            //     options: {
-            //         address: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d', // USDC contract address on Ethereum Mainnet
-            //         symbol: 'USDC', // Token symbol
-            //         decimals: 6, // Decimals for USDC
-            //         image: 'https://cryptologos.cc/logos/usd-coin-usdc-logo.png' // Token logo URL (optional)
-            //     }
-            // };
-
-            // // Request MetaMask to add USDC to the user's wallet
-            // await window.ethereum.request({
-            //     method: 'wallet_watchAsset',
-            //     params: {
-            //         type: tokenDetails.type,
-            //         options: tokenDetails.options
-            //     }
-            // });
             // Example transaction (Sending 0.01 ETH)
             const tx = await signer.sendTransaction(transaction);
 
@@ -113,7 +119,7 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         };
         console.log(jsonData);
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/transactions", {
+            const response = await fetch("/api/transactions", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
