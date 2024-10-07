@@ -11,12 +11,6 @@ import { ethers } from "ethers";
 import { SassColor } from "sass";
 import { currencyApprovedForListingEvent } from "thirdweb/extensions/marketplace";
 
-const metamaskProvider = injectedProvider("io.metamask");
-
-if (metamaskProvider) {
-    console.log("Metamask is installed");
-  }
-
 // Initialize Thirdweb Client with your client ID
 const client = createThirdwebClient({
     clientId: "6e3341558f26a47c34200697879915fb", // Replace with your actual Thirdweb client ID
@@ -99,15 +93,15 @@ export function WalletConnection() {
         let amount = null;
         if (selectedCurrency === "USDT" || selectedCurrency === "USDC"){
             setLoading(true);
-            amount = (0.00001); // Multiply by 250 (your fixed amount)
+            amount = (0.001); // Multiply by 250 (your fixed amount)
             setTransactionAmount(amount);
             setLoading(false);
         }
         else{
             setLoading(true);
             const liveRate = await getLiveRates(selectedCurrency); // Fetch live rate for the selected currency
-            // amount = (0.5/liveRate); // Multiply by 250 (your fixed amount)
-            amount = (0.0000001)
+            amount = (0.5/liveRate); // Multiply by 250 (your fixed amount)
+            // amount = (0.00001)
             setTransactionAmount(amount);
             setLoading(false);
         }

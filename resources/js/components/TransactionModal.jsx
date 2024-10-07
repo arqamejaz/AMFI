@@ -2,7 +2,8 @@ import { useState } from "react";
 import { createPortal } from "react-dom"
 import { ethers } from "ethers";
 import { useNavigate } from "react-router-dom";
-import WalletConnectProvider from "@walletconnect/web3-provider";
+// import global from "global";
+// import WalletConnectProvider from "@walletconnect/web3-provider";
 
 
 export const TransactionModal = ({ address, tAmount, currency }) => {
@@ -26,30 +27,30 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         }
         // console.log(window.ethereum.request())
 
-        let provider;
+        // let provider;
 
-        // Set up provider depending on whether MetaMask or WalletConnect is available
-        if (typeof window.ethereum !== "undefined") {
-          // Web3 provider exists (MetaMask or other browser extensions)
-          provider = new ethers.providers.Web3Provider(window.ethereum);
-        } else {
-          // Fallback to WalletConnect
-          const wcProvider = new WalletConnectProvider({
-            infuraId: "223131ba87834950b982135c0e236c26", // Replace with your Infura project ID
-          });
+        // // Set up provider depending on whether MetaMask or WalletConnect is available
+        // if (typeof window.ethereum !== "undefined") {
+        //   // Web3 provider exists (MetaMask or other browser extensions)
+        //   provider = new ethers.providers.Web3Provider(window.ethereum);
+        // } else {
+        //   // Fallback to WalletConnect
+        //   const wcProvider = new WalletConnectProvider({
+        //     infuraId: "223131ba87834950b982135c0e236c26", // Replace with your Infura project ID
+        //   });
 
-          try {
-            // Enable WalletConnect provider
-            await wcProvider.enable();
-            provider = new ethers.providers.Web3Provider(wcProvider);
-          } catch (error) {
-            console.error("Failed to connect to WalletConnect", error);
-            return;
-          }
-        }
+        //   try {
+        //     // Enable WalletConnect provider
+        //     await wcProvider.enable();
+        //     provider = new ethers.providers.Web3Provider(wcProvider);
+        //   } catch (error) {
+        //     console.error("Failed to connect to WalletConnect", error);
+        //     return;
+        //   }
+        // }
 
 
-        // const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const formattedAmount = Number(tAmount).toFixed(18);
         let transaction;
