@@ -19,12 +19,12 @@ const client = createThirdwebClient({
 
 // List of wallets you want to support
 const wallets = [
-    // inAppWallet(),
+    inAppWallet(),
+    createWallet("io.metamask"), // MetaMask
     createWallet("com.trustwallet.app"),
     createWallet("me.rainbow"), // Rainbow Wallet
     createWallet("com.coinbase.wallet"), // Coinbase Wallet
     createWallet("io.zerion.wallet"), // Zerion Wallet
-    createWallet("io.metamask"), // MetaMask
 ];
 
 //Get live rates of currencies
