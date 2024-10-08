@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 
 export const TransactionModal = ({ address, tAmount, currency }) => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const [transactionHash, setTransactionHash] = useState(null);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -16,14 +15,36 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
     const [currentBalance, setCurrentBalance] = useState(0);
     const [errorMessage, setErrorMessage] = useState(0);
 
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    const connectWallet = async () => {
+        if (typeof window.ethereum === "undefined") {
+            alert("MetaMask is not installed. Please install MetaMask and try again.");
+            return;
+        }
+
+        try {
+            // Request wallet connection
+            await window.ethereum.request({ method: "eth_requestAccounts" });
+        } catch (error) {
+            console.error("User denied account access", error);
+            alert("Please connect your wallet.");
+        }
+    };
+
     const sendTransaction = async (event) => {
         event.preventDefault(); // Prevent form submission behavior
         if (!address) {
             alert("Please connect your wallet first.");
+            await connectWallet();
             return;
         }
         if (!name || !email) {
             alert("Please enter all required fields.");
+            return;
+        }
+        if (typeof window.ethereum === "undefined") {
+            alert("MetaMask is not installed or not detected. Please install MetaMask and try again.");
             return;
         }
         // console.log(window.ethereum.request())

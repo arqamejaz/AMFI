@@ -1,17 +1,17 @@
 {
-  "_SocialLogin-BNponEG5.js": {
-    "file": "assets/SocialLogin-BNponEG5.js",
+  "_SocialLogin-CM37ObSc.js": {
+    "file": "assets/SocialLogin-CM37ObSc.js",
     "name": "SocialLogin",
     "imports": [
       "resources/js/app.jsx",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/index.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/passkeys.js",
-      "_oauth-DpZjXmvn.js",
-      "_useInAppWalletLocale-BI462Ba_.js"
+      "_oauth-B2v9SllP.js",
+      "_useInAppWalletLocale-KH6sbY5C.js"
     ]
   },
-  "_decimals-D_wOAnk2.js": {
-    "file": "assets/decimals-D_wOAnk2.js",
+  "_decimals-BMKTwyOb.js": {
+    "file": "assets/decimals-BMKTwyOb.js",
     "name": "decimals",
     "imports": [
       "resources/js/app.jsx"
@@ -21,32 +21,13 @@
     "file": "assets/eth_sendRawTransaction-DPdnXbFR.js",
     "name": "eth_sendRawTransaction"
   },
-  "_index-BYsM4zZh.js": {
-    "file": "assets/index-BYsM4zZh.js",
-    "name": "index",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx"
-    ],
-    "dynamicImports": [
-      "node_modules/@walletconnect/modal-ui/dist/index.js"
-    ]
-  },
-  "_index-CNNWD7eI.js": {
-    "file": "assets/index-CNNWD7eI.js",
-    "name": "index",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx"
-    ]
-  },
-  "_index-_EL9nwCQ.js": {
-    "file": "assets/index-_EL9nwCQ.js",
+  "_index-BANV3Ygr.js": {
+    "file": "assets/index-BANV3Ygr.js",
     "name": "index",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_send-eip712-transaction-CsAfOH-A.js",
+      "_send-eip712-transaction-CDexsTS-.js",
       "node_modules/thirdweb/dist/esm/utils/encoding/helpers/concat-hex.js"
     ],
     "dynamicImports": [
@@ -63,8 +44,27 @@
       "resources/js/app.jsx"
     ]
   },
-  "_isValidSignature-LzYc-CRD.js": {
-    "file": "assets/isValidSignature-LzYc-CRD.js",
+  "_index-BcaoQdMZ.js": {
+    "file": "assets/index-BcaoQdMZ.js",
+    "name": "index",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_index-DPU9c3oj.js": {
+    "file": "assets/index-DPU9c3oj.js",
+    "name": "index",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ],
+    "dynamicImports": [
+      "node_modules/@walletconnect/modal-ui/dist/index.js"
+    ]
+  },
+  "_isValidSignature-BkTcWvVu.js": {
+    "file": "assets/isValidSignature-BkTcWvVu.js",
     "name": "isValidSignature",
     "imports": [
       "resources/js/app.jsx"
@@ -74,26 +74,26 @@
     "file": "assets/lit-element-KhTZQWWL.js",
     "name": "lit-element"
   },
-  "_oauth-DpZjXmvn.js": {
-    "file": "assets/oauth-DpZjXmvn.js",
+  "_oauth-B2v9SllP.js": {
+    "file": "assets/oauth-B2v9SllP.js",
     "name": "oauth",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_send-eip712-transaction-CsAfOH-A.js": {
-    "file": "assets/send-eip712-transaction-CsAfOH-A.js",
+  "_send-eip712-transaction-CDexsTS-.js": {
+    "file": "assets/send-eip712-transaction-CDexsTS-.js",
     "name": "send-eip712-transaction",
     "isDynamicEntry": true,
     "imports": [
       "_eth_sendRawTransaction-DPdnXbFR.js",
       "resources/js/app.jsx",
       "node_modules/thirdweb/dist/esm/utils/encoding/helpers/concat-hex.js",
-      "_sha256-BPNxt1Wb.js"
+      "_sha256-DjP2213d.js"
     ]
   },
-  "_session-request-DKpvpYrr.js": {
-    "file": "assets/session-request-DKpvpYrr.js",
+  "_session-request-Dca66IHa.js": {
+    "file": "assets/session-request-Dca66IHa.js",
     "name": "session-request",
     "isDynamicEntry": true,
     "imports": [
@@ -110,19 +110,19 @@
       "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/switch-chain.js"
     ]
   },
-  "_sha256-BPNxt1Wb.js": {
-    "file": "assets/sha256-BPNxt1Wb.js",
+  "_sha256-DjP2213d.js": {
+    "file": "assets/sha256-DjP2213d.js",
     "name": "sha256",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_useInAppWalletLocale-BI462Ba_.js": {
-    "file": "assets/useInAppWalletLocale-BI462Ba_.js",
+  "_useInAppWalletLocale-KH6sbY5C.js": {
+    "file": "assets/useInAppWalletLocale-KH6sbY5C.js",
     "name": "useInAppWalletLocale",
     "imports": [
       "resources/js/app.jsx",
-      "_oauth-DpZjXmvn.js"
+      "_oauth-B2v9SllP.js"
     ],
     "dynamicImports": [
       "node_modules/thirdweb/dist/esm/react/web/wallets/shared/locale/es.js",
@@ -136,13 +136,13 @@
     ]
   },
   "node_modules/@walletconnect/modal-ui/dist/index.js": {
-    "file": "assets/index-DWr5NDu6.js",
+    "file": "assets/index-C1J9l9Um.js",
     "name": "index",
     "src": "node_modules/@walletconnect/modal-ui/dist/index.js",
     "isDynamicEntry": true,
     "imports": [
       "_lit-element-KhTZQWWL.js",
-      "_index-BYsM4zZh.js",
+      "_index-DPU9c3oj.js",
       "resources/js/app.jsx"
     ]
   },
@@ -153,63 +153,63 @@
     "isDynamicEntry": true
   },
   "node_modules/thirdweb/dist/esm/extensions/erc1271/checkContractWalletSignature.js": {
-    "file": "assets/checkContractWalletSignature-xVsNpNZf.js",
+    "file": "assets/checkContractWalletSignature-BLghRdEm.js",
     "name": "checkContractWalletSignature",
     "src": "node_modules/thirdweb/dist/esm/extensions/erc1271/checkContractWalletSignature.js",
     "isDynamicEntry": true,
     "imports": [
-      "_isValidSignature-LzYc-CRD.js",
+      "_isValidSignature-BkTcWvVu.js",
       "resources/js/app.jsx"
     ]
   },
   "node_modules/thirdweb/dist/esm/extensions/erc1271/checkContractWalletSignedTypedData.js": {
-    "file": "assets/checkContractWalletSignedTypedData-6WSFMKyw.js",
+    "file": "assets/checkContractWalletSignedTypedData-fITu3o_p.js",
     "name": "checkContractWalletSignedTypedData",
     "src": "node_modules/thirdweb/dist/esm/extensions/erc1271/checkContractWalletSignedTypedData.js",
     "isDynamicEntry": true,
     "imports": [
-      "_isValidSignature-LzYc-CRD.js",
+      "_isValidSignature-BkTcWvVu.js",
       "resources/js/app.jsx",
-      "_index-_EL9nwCQ.js",
-      "_send-eip712-transaction-CsAfOH-A.js",
+      "_index-BANV3Ygr.js",
+      "_send-eip712-transaction-CDexsTS-.js",
       "_eth_sendRawTransaction-DPdnXbFR.js",
       "node_modules/thirdweb/dist/esm/utils/encoding/helpers/concat-hex.js",
-      "_sha256-BPNxt1Wb.js"
+      "_sha256-DjP2213d.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/extensions/erc20/read/decimals.js": {
-    "file": "assets/decimals-CqC0j1hD.js",
+    "file": "assets/decimals-DkhFNNH3.js",
     "name": "decimals",
     "src": "node_modules/thirdweb/dist/esm/extensions/erc20/read/decimals.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_decimals-D_wOAnk2.js"
+      "_decimals-BMKTwyOb.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/extensions/erc20/read/getBalance.js": {
-    "file": "assets/getBalance-2MYUh4yL.js",
+    "file": "assets/getBalance-D0i5rT4l.js",
     "name": "getBalance",
     "src": "node_modules/thirdweb/dist/esm/extensions/erc20/read/getBalance.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
       "node_modules/thirdweb/dist/esm/extensions/erc20/read/getCurrencyMetadata.js",
-      "_decimals-D_wOAnk2.js"
+      "_decimals-BMKTwyOb.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/extensions/erc20/read/getCurrencyMetadata.js": {
-    "file": "assets/getCurrencyMetadata-DVSBcTAM.js",
+    "file": "assets/getCurrencyMetadata-CtxmRsop.js",
     "name": "getCurrencyMetadata",
     "src": "node_modules/thirdweb/dist/esm/extensions/erc20/read/getCurrencyMetadata.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_decimals-D_wOAnk2.js"
+      "_decimals-BMKTwyOb.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/extensions/erc721/__generated__/IERC721A/read/ownerOf.js": {
-    "file": "assets/ownerOf-Deq_yGah.js",
+    "file": "assets/ownerOf-DsEcR9sd.js",
     "name": "ownerOf",
     "src": "node_modules/thirdweb/dist/esm/extensions/erc721/__generated__/IERC721A/read/ownerOf.js",
     "isDynamicEntry": true,
@@ -218,17 +218,17 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/gas/estimate-l1-fee.js": {
-    "file": "assets/estimate-l1-fee-BQKRg8Wk.js",
+    "file": "assets/estimate-l1-fee-CQAHMITS.js",
     "name": "estimate-l1-fee",
     "src": "node_modules/thirdweb/dist/esm/gas/estimate-l1-fee.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_sha256-BPNxt1Wb.js"
+      "_sha256-DjP2213d.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/react/web/ui/ConnectWallet/Modal/AllWalletsUI.js": {
-    "file": "assets/AllWalletsUI-DWVy_kez.js",
+    "file": "assets/AllWalletsUI-BpyQ3c4Z.js",
     "name": "AllWalletsUI",
     "src": "node_modules/thirdweb/dist/esm/react/web/ui/ConnectWallet/Modal/AllWalletsUI.js",
     "isDynamicEntry": true,
@@ -285,7 +285,7 @@
     "isDynamicEntry": true
   },
   "node_modules/thirdweb/dist/esm/react/web/ui/ConnectWallet/screens/Buy/BuyScreen.js": {
-    "file": "assets/BuyScreen-8lwbPmCa.js",
+    "file": "assets/BuyScreen-_E5051ak.js",
     "name": "BuyScreen",
     "src": "node_modules/thirdweb/dist/esm/react/web/ui/ConnectWallet/screens/Buy/BuyScreen.js",
     "isDynamicEntry": true,
@@ -293,14 +293,14 @@
       "resources/js/app.jsx",
       "node_modules/thirdweb/dist/esm/extensions/erc20/read/decimals.js",
       "node_modules/thirdweb/dist/esm/extensions/erc20/read/getCurrencyMetadata.js",
-      "_decimals-D_wOAnk2.js"
+      "_decimals-BMKTwyOb.js"
     ],
     "dynamicImports": [
       "node_modules/thirdweb/dist/esm/gas/estimate-l1-fee.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/react/web/ui/MediaRenderer/ModelViewer.js": {
-    "file": "assets/ModelViewer-DwQPxtRU.js",
+    "file": "assets/ModelViewer-ohv7ChKW.js",
     "name": "ModelViewer",
     "src": "node_modules/thirdweb/dist/esm/react/web/ui/MediaRenderer/ModelViewer.js",
     "isDynamicEntry": true,
@@ -310,7 +310,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/react/web/ui/components/QRCode/QRCodeRenderer.js": {
-    "file": "assets/QRCodeRenderer-BGX4VW0Q.js",
+    "file": "assets/QRCodeRenderer-Ce-7i4Bk.js",
     "name": "QRCodeRenderer",
     "src": "node_modules/thirdweb/dist/esm/react/web/ui/components/QRCode/QRCodeRenderer.js",
     "isDynamicEntry": true,
@@ -319,43 +319,43 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/react/web/wallets/ecosystem/EcosystemWalletConnectUI.js": {
-    "file": "assets/EcosystemWalletConnectUI-DKQGG0T4.js",
+    "file": "assets/EcosystemWalletConnectUI-qGJVlFHb.js",
     "name": "EcosystemWalletConnectUI",
     "src": "node_modules/thirdweb/dist/esm/react/web/wallets/ecosystem/EcosystemWalletConnectUI.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_useInAppWalletLocale-BI462Ba_.js",
-      "_SocialLogin-BNponEG5.js",
-      "_oauth-DpZjXmvn.js",
+      "_useInAppWalletLocale-KH6sbY5C.js",
+      "_SocialLogin-CM37ObSc.js",
+      "_oauth-B2v9SllP.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/index.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/passkeys.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/react/web/wallets/in-app/InAppWalletConnectUI.js": {
-    "file": "assets/InAppWalletConnectUI-CaMptF9-.js",
+    "file": "assets/InAppWalletConnectUI-BgXnZbI2.js",
     "name": "InAppWalletConnectUI",
     "src": "node_modules/thirdweb/dist/esm/react/web/wallets/in-app/InAppWalletConnectUI.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_SocialLogin-BNponEG5.js",
-      "_useInAppWalletLocale-BI462Ba_.js",
+      "_SocialLogin-CM37ObSc.js",
+      "_useInAppWalletLocale-KH6sbY5C.js",
       "node_modules/thirdweb/dist/esm/react/web/ui/ConnectWallet/Modal/AllWalletsUI.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/index.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/passkeys.js",
-      "_oauth-DpZjXmvn.js"
+      "_oauth-B2v9SllP.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/react/web/wallets/in-app/InAppWalletSelectionUI.js": {
-    "file": "assets/InAppWalletSelectionUI-D-viEBiF.js",
+    "file": "assets/InAppWalletSelectionUI-DQxHuErE.js",
     "name": "InAppWalletSelectionUI",
     "src": "node_modules/thirdweb/dist/esm/react/web/wallets/in-app/InAppWalletSelectionUI.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_useInAppWalletLocale-BI462Ba_.js",
-      "_oauth-DpZjXmvn.js"
+      "_useInAppWalletLocale-KH6sbY5C.js",
+      "_oauth-B2v9SllP.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/react/web/wallets/in-app/supported-sms-countries.js": {
@@ -413,7 +413,7 @@
     "isDynamicEntry": true
   },
   "node_modules/thirdweb/dist/esm/react/web/wallets/shared/CoinbaseSDKConnection.js": {
-    "file": "assets/CoinbaseSDKConnection-ClEQ5Ci5.js",
+    "file": "assets/CoinbaseSDKConnection-j1HTb_Th.js",
     "name": "CoinbaseSDKConnection",
     "src": "node_modules/thirdweb/dist/esm/react/web/wallets/shared/CoinbaseSDKConnection.js",
     "isDynamicEntry": true,
@@ -518,7 +518,7 @@
     "isDynamicEntry": true
   },
   "node_modules/thirdweb/dist/esm/rpc/actions/eth_estimateGas.js": {
-    "file": "assets/eth_estimateGas-D0ewitAF.js",
+    "file": "assets/eth_estimateGas-B0Btxlc-.js",
     "name": "eth_estimateGas",
     "src": "node_modules/thirdweb/dist/esm/rpc/actions/eth_estimateGas.js",
     "isDynamicEntry": true,
@@ -527,7 +527,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/rpc/actions/eth_getTransactionCount.js": {
-    "file": "assets/eth_getTransactionCount-jj95oLzm.js",
+    "file": "assets/eth_getTransactionCount-e5Aj9AN8.js",
     "name": "eth_getTransactionCount",
     "src": "node_modules/thirdweb/dist/esm/rpc/actions/eth_getTransactionCount.js",
     "isDynamicEntry": true,
@@ -536,7 +536,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/transaction/actions/gasless/providers/biconomy.js": {
-    "file": "assets/biconomy-D1weS-ZH.js",
+    "file": "assets/biconomy-Cgj0CzRH.js",
     "name": "biconomy",
     "src": "node_modules/thirdweb/dist/esm/transaction/actions/gasless/providers/biconomy.js",
     "isDynamicEntry": true,
@@ -545,7 +545,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/transaction/actions/gasless/providers/engine.js": {
-    "file": "assets/engine-Be8I1xTJ.js",
+    "file": "assets/engine-BiIqPhfG.js",
     "name": "engine",
     "src": "node_modules/thirdweb/dist/esm/transaction/actions/gasless/providers/engine.js",
     "isDynamicEntry": true,
@@ -554,7 +554,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/transaction/actions/gasless/providers/openzeppelin.js": {
-    "file": "assets/openzeppelin-C7uX2MQA.js",
+    "file": "assets/openzeppelin-BopKBUen.js",
     "name": "openzeppelin",
     "src": "node_modules/thirdweb/dist/esm/transaction/actions/gasless/providers/openzeppelin.js",
     "isDynamicEntry": true,
@@ -563,7 +563,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/transaction/actions/gasless/send-gasless-transaction.js": {
-    "file": "assets/send-gasless-transaction-3cGUSLJo.js",
+    "file": "assets/send-gasless-transaction-CDQB38eJ.js",
     "name": "send-gasless-transaction",
     "src": "node_modules/thirdweb/dist/esm/transaction/actions/gasless/send-gasless-transaction.js",
     "isDynamicEntry": true,
@@ -583,7 +583,7 @@
     "isDynamicEntry": true
   },
   "node_modules/thirdweb/dist/esm/utils/hashing/hashMessage.js": {
-    "file": "assets/hashMessage-DPJNVLfn.js",
+    "file": "assets/hashMessage-C41V9xtf.js",
     "name": "hashMessage",
     "src": "node_modules/thirdweb/dist/esm/utils/hashing/hashMessage.js",
     "isDynamicEntry": true,
@@ -5068,7 +5068,7 @@
     "isDynamicEntry": true
   },
   "node_modules/thirdweb/dist/esm/wallets/ecosystem/get-ecosystem-wallet-info.js": {
-    "file": "assets/get-ecosystem-wallet-info-BlTA32dM.js",
+    "file": "assets/get-ecosystem-wallet-info-BfEJ4lFM.js",
     "name": "get-ecosystem-wallet-info",
     "src": "node_modules/thirdweb/dist/esm/wallets/ecosystem/get-ecosystem-wallet-info.js",
     "isDynamicEntry": true,
@@ -5077,7 +5077,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/index.js": {
-    "file": "assets/index-EK_o2tXv.js",
+    "file": "assets/index-BnVv_8yn.js",
     "name": "index",
     "src": "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/index.js",
     "isDynamicEntry": true,
@@ -5089,7 +5089,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/passkeys.js": {
-    "file": "assets/passkeys-DUXw_JZg.js",
+    "file": "assets/passkeys-Dfjjk89V.js",
     "name": "passkeys",
     "src": "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/passkeys.js",
     "isDynamicEntry": true,
@@ -5098,14 +5098,14 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/web-connector.js": {
-    "file": "assets/web-connector-skermnwu.js",
+    "file": "assets/web-connector-B3sA77EO.js",
     "name": "web-connector",
     "src": "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/web-connector.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
       "node_modules/thirdweb/dist/esm/auth/core/sign-login-payload.js",
-      "_oauth-DpZjXmvn.js",
+      "_oauth-B2v9SllP.js",
       "_eth_sendRawTransaction-DPdnXbFR.js"
     ],
     "dynamicImports": [
@@ -5113,7 +5113,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/injected/index.js": {
-    "file": "assets/index-BE9JifuZ.js",
+    "file": "assets/index-BjzSjozL.js",
     "name": "index",
     "src": "node_modules/thirdweb/dist/esm/wallets/injected/index.js",
     "isDynamicEntry": true,
@@ -5122,7 +5122,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/wallet-connect/controller.js": {
-    "file": "assets/controller-H1xKRQoD.js",
+    "file": "assets/controller-tlS4qFu3.js",
     "name": "controller",
     "src": "node_modules/thirdweb/dist/esm/wallets/wallet-connect/controller.js",
     "isDynamicEntry": true,
@@ -5140,47 +5140,47 @@
     "isDynamicEntry": true
   },
   "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/send-transaction.js": {
-    "file": "assets/send-transaction-BC2AA8DD.js",
+    "file": "assets/send-transaction-BJC213oE.js",
     "name": "send-transaction",
     "src": "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/send-transaction.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_session-request-DKpvpYrr.js"
+      "_session-request-Dca66IHa.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/sign-transaction.js": {
-    "file": "assets/sign-transaction-Cw0VEhjt.js",
+    "file": "assets/sign-transaction-BSGxWJGa.js",
     "name": "sign-transaction",
     "src": "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/sign-transaction.js",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_session-request-DKpvpYrr.js"
+      "_session-request-Dca66IHa.js"
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/sign-typed-data.js": {
-    "file": "assets/sign-typed-data-B3oQkAqJ.js",
+    "file": "assets/sign-typed-data-CJjs6Tro.js",
     "name": "sign-typed-data",
     "src": "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/sign-typed-data.js",
     "isDynamicEntry": true,
     "imports": [
-      "_session-request-DKpvpYrr.js",
+      "_session-request-Dca66IHa.js",
       "resources/js/app.jsx"
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/sign.js": {
-    "file": "assets/sign-Cz89RXOP.js",
+    "file": "assets/sign-Ut9t-uXj.js",
     "name": "sign",
     "src": "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/sign.js",
     "isDynamicEntry": true,
     "imports": [
-      "_session-request-DKpvpYrr.js",
+      "_session-request-Dca66IHa.js",
       "resources/js/app.jsx"
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/switch-chain.js": {
-    "file": "assets/switch-chain-hV2tfBNg.js",
+    "file": "assets/switch-chain-jblSrB_d.js",
     "name": "switch-chain",
     "src": "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/request-handlers/switch-chain.js",
     "isDynamicEntry": true,
@@ -5189,7 +5189,7 @@
     ]
   },
   "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/session-proposal.js": {
-    "file": "assets/session-proposal-C6fk059H.js",
+    "file": "assets/session-proposal-DhbHTaG_.js",
     "name": "session-proposal",
     "src": "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/session-proposal.js",
     "isDynamicEntry": true,
@@ -5198,7 +5198,7 @@
     ]
   },
   "node_modules/thirdweb/node_modules/@walletconnect/ethereum-provider/dist/index.es.js": {
-    "file": "assets/index.es-cIZTByP8.js",
+    "file": "assets/index.es-QsWAyN6c.js",
     "name": "index.es",
     "src": "node_modules/thirdweb/node_modules/@walletconnect/ethereum-provider/dist/index.es.js",
     "isDynamicEntry": true,
@@ -5206,11 +5206,11 @@
       "resources/js/app.jsx"
     ],
     "dynamicImports": [
-      "_index-BYsM4zZh.js"
+      "_index-DPU9c3oj.js"
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-BlAPlt3l.js",
+    "file": "assets/app-DQixwkwW.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -5219,19 +5219,19 @@
       "node_modules/thirdweb/dist/esm/utils/encoding/helpers/concat-hex.js",
       "node_modules/thirdweb/dist/esm/rpc/actions/eth_estimateGas.js",
       "node_modules/thirdweb/dist/esm/rpc/actions/eth_getTransactionCount.js",
-      "_send-eip712-transaction-CsAfOH-A.js",
+      "_send-eip712-transaction-CDexsTS-.js",
       "node_modules/thirdweb/dist/esm/transaction/actions/gasless/send-gasless-transaction.js",
       "node_modules/thirdweb/dist/esm/extensions/erc20/read/decimals.js",
       "node_modules/thirdweb/dist/esm/auth/core/sign-login-payload.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/web-connector.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/web-connector.js",
-      "_index-CNNWD7eI.js",
+      "_index-BcaoQdMZ.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/web-connector.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/web-connector.js",
-      "_index-_EL9nwCQ.js",
-      "_index-_EL9nwCQ.js",
-      "_index-_EL9nwCQ.js",
-      "_index-_EL9nwCQ.js",
+      "_index-BANV3Ygr.js",
+      "_index-BANV3Ygr.js",
+      "_index-BANV3Ygr.js",
+      "_index-BANV3Ygr.js",
       "node_modules/thirdweb/dist/esm/wallets/injected/index.js",
       "node_modules/thirdweb/dist/esm/wallets/wallet-connect/controller.js",
       "node_modules/thirdweb/dist/esm/wallets/wallet-connect/controller.js",
@@ -6016,14 +6016,14 @@
       "node_modules/thirdweb/dist/esm/react/web/wallets/in-app/InAppWalletSelectionUI.js",
       "node_modules/thirdweb/dist/esm/react/web/ui/ConnectWallet/Modal/AllWalletsUI.js",
       "node_modules/thirdweb/dist/esm/react/web/wallets/in-app/InAppWalletConnectUI.js",
-      "_index-_EL9nwCQ.js",
+      "_index-BANV3Ygr.js",
       "node_modules/thirdweb/dist/esm/extensions/erc20/read/decimals.js",
       "node_modules/thirdweb/dist/esm/extensions/erc20/read/getBalance.js",
       "node_modules/thirdweb/dist/esm/extensions/erc20/read/getCurrencyMetadata.js",
       "node_modules/thirdweb/dist/esm/extensions/erc721/__generated__/IERC721A/read/ownerOf.js",
       "node_modules/thirdweb/dist/esm/react/web/ui/MediaRenderer/ModelViewer.js",
       "node_modules/thirdweb/dist/esm/wallets/wallet-connect/receiver/session-proposal.js",
-      "_session-request-DKpvpYrr.js",
+      "_session-request-Dca66IHa.js",
       "node_modules/thirdweb/dist/esm/react/web/wallets/in-app/supported-sms-countries.js",
       "node_modules/thirdweb/dist/esm/wallets/in-app/web/lib/auth/index.js"
     ]
