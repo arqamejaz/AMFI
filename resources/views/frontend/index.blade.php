@@ -73,7 +73,10 @@
                             </ul>
 
                             <!-- Button -->
-                            <a href="#" class="btn login-btn ml-50">Launch App</a>
+                            <a href="#" class="btn login-btn ml-50">
+                                Launch App
+                                <span class="hover-text">Coming Soon!</span>
+                            </a>
                         </div>
                         <!-- Nav End -->
                     </div>
@@ -468,12 +471,12 @@
                         <a class="nav-link active" aria-current="page" data-bs-toggle="tab"
                             href="#token-allocation">Token Allocation</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="roadmap">
                         <a class="nav-link" data-bs-toggle="tab" href="#road-map">Roadmap</a>
                     </li>
                 </ul>
 
-                <div class="tab-content mt-3">
+                <div class="tab-content mt-3" >
                     <div class="tab-pane fade show active" id="token-allocation">
                         <div class="styled-table">
                             <h2 class="text-center mb-30">Allocation & Vesting</h2>
@@ -580,6 +583,23 @@
                         <div class="timeline-new">
                             <div class="container-new left-new">
                                 <div class="content-new fadeInUp-new">
+                                    <h6 class="card-title">Q-1 (Oct-Dec 2024): Foundation & Initial Development</h6>
+                                    <ul class="fa-ul">
+                                        <li>• Website Launch</li>
+                                        <li>• Whitepaper & Tokenomics </li>
+                                        <li>• Whitlisting for Seed Round </li>
+                                        <li>• Smart Contract Development</li>
+                                        <li>• Seed Round Launch</li>
+                                        <li>• Pre-Sale Launch (Round-1 &2)</li>
+                                        <li>• Launch of Staking & Yield Farming</li>
+                                        <li>• Marketing Campaign</li>
+                                        <li>• Initial Development & Community Building</li>
+                                        <li>• Smart Contract Audit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="container-new right-new">
+                                <div class="content-new fadeInUp-new">
                                     <h6 class="card-title">Q-2 (Dec 2024-Feb 2025): Alpha Testing & Presale
                                         Progress</h6>
                                     <ul class="fa-ul">
@@ -596,7 +616,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="container-new right-new">
+                            <div class="container-new left-new">
                                 <div class="content-new fadeInUp-new">
                                     <h6 class="card-title">Q-3 (Mar-May 2025): Alpha Testing & Presale Progress
                                     </h6>
@@ -613,7 +633,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="container-new left-new">
+                            <div class="container-new right-new">
                                 <div class="content-new fadeInUp-new">
                                     <h6 class="card-title">Q-4 (Jun-Aug 2025): Continued Growth & Development</h6>
                                     <ul class="fa-ul">
@@ -629,7 +649,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="container-new right-new">
+                            <div class="container-new left-new">
                                 <div class="content-new fadeInUp-new">
                                     <h6 class="card-title">Development Phases</h6>
                                     <ul class="fa-ul">
@@ -661,7 +681,7 @@
     <!-- ##### token-distribution Area End ##### -->
 
     <!-- ##### Our presale roadmap Area start ##### -->
-    <section class="roadmap section-padding-100 full-bg-img" id="roadmap">
+    <section class="roadmap section-padding-100 full-bg-img">
 
         <div class="container-fluid">
             <div class="section-heading text-center">
@@ -1745,7 +1765,6 @@
             </div>
         </div>
         <!-- ##### Contact Area End ##### -->
-
         <div class="footer-content-area " style="background-image: url(frontend/img/core-img/footer-bg1.png);">
             <div class="container">
                 <div class="row align-items-end">
@@ -1758,15 +1777,7 @@
                                             src="{{ url('frontend/img/core-img/logo.png') }}" alt="logo">
                                         Automated Meta Finance</a>
                                 </div>
-                                <p>At AMFI, we're not just innovating finance; we're redefining it for a world that's smarter, more connected and truly decentralized. Welcome to the future of finance. Welcome to AMFI.</p>
-                            </div>
-                            <!-- Social Icon -->
-                            <div class="footer-social-info wow fadeInUp" data-wow-delay="0.4s">
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="https://x.com/amfi_official"> <i class="fa fa-twitter" aria-hidden="true"></i></>
-                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <p>At AMFI, we are not just innovating finance; we are redefining it for a world that's smarter, more connected and truly decentralized. Welcome to the future of finance. Welcome to AMFI.</p>
                             </div>
                         </div>
                     </div>
@@ -1827,8 +1838,8 @@
             </div>
             <div class="col-6 mt-2">
                 <p class="text-center">
-                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper">Privacy Policy</a>
-                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper" class="pl-5">Terms & Conditions</a>
+                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper/privacy-policy">Privacy Policy</a>
+                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper/terms-of-services" class="pl-5">Terms & Services</a>
                 </p>
             </div>
         </div>

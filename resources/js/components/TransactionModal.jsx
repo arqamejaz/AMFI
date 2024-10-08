@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export const TransactionModal = ({ address, tAmount, currency }) => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const [transactionHash, setTransactionHash] = useState(null);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -76,8 +77,15 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         }
 
         try {
-            // Example transaction (Sending 0.01 ETH)
-            const tx = await signer.sendTransaction(transaction);
+
+            if(isMobile){
+                const deepLinkUri = `ethereum:${recipient}?value=${formattedAmount.toString()}&gas=0x5208&data=0x`;
+                window.location.href = deepLinkUri;
+            }
+            else{
+                // Example transaction
+                const tx = await signer.sendTransaction(transaction);
+            }
 
             console.log("Transaction Hash:", tx.hash);
             setTransactionHash(tx.hash);

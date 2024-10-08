@@ -321,7 +321,12 @@
                                     <h3>$0.025</h3>
 
                                     <h6>Allocation</h6>
-                                    <h3>{{ $transactions->count() * 10000 }} AMFI</h3>
+                                    <h3>{{ $transactions->count() * 10000 }} AMFI
+                                    <button class="btn claim-btn ml-5">
+                                        Claim!
+                                        <span class="hover-text">After Presale Ends!</span>
+                                    </buttons></h3>
+
                                 </div>
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>

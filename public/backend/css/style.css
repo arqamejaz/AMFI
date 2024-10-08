@@ -9,3 +9,33 @@
   border-radius: 20px;
 }
 
+.claim-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: blue;
+  color: white;
+}
+
+.hover-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  font-size: 12px;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.claim-btn:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+  color: white;
+}
