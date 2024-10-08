@@ -27,7 +27,7 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         }
         // console.log(window.ethereum.request())
 
-        // let provider;
+        let provider;
 
         // // Set up provider depending on whether MetaMask or WalletConnect is available
         // if (typeof window.ethereum !== "undefined") {
@@ -49,8 +49,8 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         //   }
         // }
 
-
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        window.ethereum.enable().then(provider = new ethers.providers.Web3Provider(window.ethereum));
+        // const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const formattedAmount = Number(tAmount).toFixed(18);
         let transaction;

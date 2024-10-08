@@ -1,1 +1,0 @@
-import{v as n}from"./session-request-CTiqKDw_.js";import"./app-C7O1Bmod.js";async function o(e){const{account:s,params:a}=e;return n(s,a[1]),s.signMessage({message:{raw:a[0]}})}export{o as handleSignRequest};
