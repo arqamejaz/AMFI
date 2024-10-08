@@ -78,9 +78,13 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
 
         try {
 
-            if(isMobile){
-                const deepLinkUri = `ethereum:${recipient}?value=${formattedAmount.toString()}&gas=0x5208&data=0x`;
-                window.location.href = deepLinkUri;
+            let tx;
+            if (isMobile) {
+                // For mobile, use ethereum.request to trigger MetaMask mobile app
+                tx = await window.ethereum.request({
+                    method: "eth_sendTransaction",
+                    params: [transaction],
+                });
             }
             else{
                 // Example transaction
