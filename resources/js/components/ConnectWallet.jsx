@@ -4,17 +4,15 @@ import { ThirdwebProvider, ConnectButton, ConnectEmbed , darkTheme, useNetworkSw
 // import { sepolia, lineaSepolia  } from "thirdweb/chains"
 // import { polygon } from "thirdweb/chains"
 import { ethereum, bsc, polygon } from "thirdweb/chains"
-import { createWallet, injectedProvider } from "thirdweb/wallets";
+import { createWallet, injectedProvider, inAppWallet } from "thirdweb/wallets";
 import { TransactionModal } from './TransactionModal'
 import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
 import { SassColor } from "sass";
-import { currencyApprovedForListingEvent } from "thirdweb/extensions/marketplace";
 
 // Initialize Thirdweb Client with your client ID
 const client = createThirdwebClient({
     clientId: "6e3341558f26a47c34200697879915fb", // Replace with your actual Thirdweb client ID
-    secretKey: "X1lWKLzLGVgciMKAOeFlg4A6YVmMVIadiyQmNPMR-dfpBQ1L5C4DzT1pRfYNSK-NOMGDR4wmAbpWnggPBY0T5g",
 });
 
 // List of wallets you want to support
@@ -191,7 +189,7 @@ export function WalletConnection() {
     };
 
     return (
-        <ThirdwebProvider>
+        <ThirdwebProvider >
             <link rel="stylesheet" href="/frontend/css/style.css" />
             <div className="counter-down">
                 <div className="content">
