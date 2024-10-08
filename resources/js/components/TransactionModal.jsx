@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createPortal } from "react-dom"
 import { ethers } from "ethers";
 import { useNavigate } from "react-router-dom";
+import detectEthereumProvider from "@metamask/detect-provider";
 // import global from "global";
 // import WalletConnectProvider from "@walletconnect/web3-provider";
 
@@ -27,7 +28,7 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         }
         // console.log(window.ethereum.request())
 
-        let provider;
+        // let provider;
 
         // // Set up provider depending on whether MetaMask or WalletConnect is available
         // if (typeof window.ethereum !== "undefined") {
@@ -49,9 +50,11 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         //   }
         // }
 
-        window.ethereum.enable().then(provider = new ethers.providers.Web3Provider(window.ethereum));
-        // const provider = new ethers.providers.Web3Provider(window.ethereum);
+        // window.ethereum.enable().then(provider = new ethers.providers.Web3Provider(window.ethereum));
+        const etherum = await detectEthereumProvider()
+        const provider = new ethers.providers.Web3Provider(etherum);
         const signer = provider.getSigner();
+
         const formattedAmount = Number(tAmount).toFixed(18);
         let transaction;
         const recipient = "0x143c5eC14522d150F4F5E1ddCA7E90BA42dbD438"; // Replace with actual recipient address

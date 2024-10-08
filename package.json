@@ -19,6 +19,7 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
+        "@metamask/detect-provider": "^2.0.0",
         "@thirdweb-dev/react": "^4.9.2",
         "@thirdweb-dev/wallets": "^0.2.8",
         "@walletconnect/web3-provider": "^1.8.0",
