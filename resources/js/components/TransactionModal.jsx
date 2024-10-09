@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { createPortal } from "react-dom"
 import { ethers } from "ethers";
+import { useSDK } from "@metamask/sdk-react";
 import { useNavigate } from "react-router-dom";
-import detectEthereumProvider from "@metamask/detect-provider";
 // import global from "global";
 // import WalletConnectProvider from "@walletconnect/web3-provider";
 
@@ -16,8 +16,24 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
     const [currentBalance, setCurrentBalance] = useState(0);
     const [errorMessage, setErrorMessage] = useState(0);
 
+    const { sdk, connected, provider} = useSDK();
+
     const sendTransaction = async (event) => {
         event.preventDefault(); // Prevent form submission behavior
+        if (!provider) {
+            alert("MetaMask provider is not available. Please connect your wallet.");
+            return;
+        }
+
+        // Check if wallet is connected
+        if (!connected) {
+            try {
+                await sdk.connect();
+            } catch (error) {
+                console.error("Failed to connect to MetaMask", error);
+                return;
+            }
+        }
         if (!address) {
             alert("Please connect your wallet first.");
             return;
@@ -51,9 +67,9 @@ export const TransactionModal = ({ address, tAmount, currency }) => {
         // }
 
         // window.ethereum.enable().then(provider = new ethers.providers.Web3Provider(window.ethereum));
-        const etherum = await detectEthereumProvider()
-        const provider = new ethers.providers.Web3Provider(etherum);
-        const signer = provider.getSigner();
+        const provider1 = new ethers.providers.Web3Provider(provider);
+        console.log("provider",provider);
+        const signer = provider1.getSigner();
 
         const formattedAmount = Number(tAmount).toFixed(18);
         let transaction;

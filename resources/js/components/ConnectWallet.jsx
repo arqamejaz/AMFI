@@ -6,6 +6,7 @@ import { ThirdwebProvider, ConnectButton, ConnectEmbed , darkTheme, useNetworkSw
 import { ethereum, bsc, polygon } from "thirdweb/chains"
 import { createWallet, injectedProvider, inAppWallet } from "thirdweb/wallets";
 import { TransactionModal } from './TransactionModal'
+import { MetaMaskProvider } from "@metamask/sdk-react";
 import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
 import { SassColor } from "sass";
@@ -189,6 +190,17 @@ export function WalletConnection() {
     };
 
     return (
+        <MetaMaskProvider
+      debug={true}
+      sdkOptions={{
+        dappMetadata: {
+          name: "AMFI",
+          url: window.location.href,
+        },
+        infuraAPIKey: "223131ba87834950b982135c0e236c26",
+        // Other options.
+      }}
+    >
         <ThirdwebProvider >
             <link rel="stylesheet" href="/frontend/css/style.css" />
             <div className="counter-down">
@@ -303,5 +315,6 @@ export function WalletConnection() {
             <TransactionModal address={address} tAmount={transactionAmount} currency={currency}/>
 
         </ThirdwebProvider>
+    </MetaMaskProvider>
     );
 }
