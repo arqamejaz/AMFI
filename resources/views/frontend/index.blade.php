@@ -28,8 +28,7 @@
     <!-- Preloader -->
     <div id="preloader">
         <div class="preload-content">
-            <div id="dream-load"></div>
-        </div>
+            <img src="frontend/img/core-img/loader.gif" style="transform: scale(2);" alt="Loading..." id="dream-load" /></div>
     </div>
 
     <!-- ##### Header Area Start ##### -->
@@ -68,7 +67,7 @@
                                 <li><a href="#services">Services</a></li>
                                 <li><a href="#roadmap">Roadmap</a></li>
                                 <li><a href="{{ url('frontend/img/pitchdeck.pdf') }}" target="_blank">Pitch Deck</a></li>
-                                <li><a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper">White Paper</a></li>
+                                <li><a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper" target="_blank">White Paper</a></li>
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
 
@@ -145,6 +144,14 @@
     <!-- ##### Welcome Area End ##### -->
     <div class="clearfix"></div>
 
+    <div class="slider-container">
+        <div class="slider">
+        <h5 class="mt-40" style="color: white">AMFI Partners</h5>
+          <img src="{{ url('frontend/img/slider/Thirdweb.png') }}" alt="Image 1">
+          <img src="{{ url('frontend/img/slider/MetaMask.png') }}" alt="Image 2">
+          <img src="{{ url('frontend/img/slider/Trustwallet.png') }}" alt="Image 3">
+        </div>
+      </div>
     <!-- ##### About AMFI Token start -->
     <section class="about-us-area section-padding-0-100 clearfix mt-100 full-bg-img" id="about">
         <div class="container">
@@ -243,7 +250,7 @@
                             <img draggable="false" src="{{ url('frontend/img/ecosystem/social.gif') }}"
                                 alt="">
                         </div>
-                        <h6>Web3 Social Meta</h6>
+                        <h6>Web3 Social Media</h6>
                         <p>A decentralized social media platform where users can create, share, and monetize content
                             within AMFI ecosystem.</p>
                     </div>
@@ -1805,7 +1812,7 @@
                             <!-- Content Info -->
                             <div class="contact_info text-center wow fadeInUp" data-wow-delay="0.3s">
                                 <h5>Help</h5>
-                                <a href="">
+                                <a href="" data-bs-toggle="modal" data-bs-target="#largeModal">
                                     <p>How to buy?</p>
                                 </a>
                                 <a href="">
@@ -1838,8 +1845,8 @@
             </div>
             <div class="col-6 mt-2">
                 <p class="text-center">
-                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper/privacy-policy">Privacy Policy</a>
-                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper/terms-of-services" class="pl-5">Terms & Services</a>
+                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper/privacy-policy" target="_blank">Privacy Policy</a>
+                    <a href="https://automated-meta-finance.gitbook.io/amfi-whitepaper/terms-of-services" target="_blank" class="pl-5">Terms & Services</a>
                 </p>
             </div>
         </div>
@@ -1893,6 +1900,19 @@
         document.getElementById('top-banner').style.display = 'none';
         document.getElementById('navbar').style.top = '0'; // Restore navbar position
     };
+
+    $(document).ready(function() {
+    // Clone the first image to create a seamless effect
+    const firstImage = $('.slider img:first-child').clone();
+    $('.slider').append(firstImage);
+
+    // Adjust the total width of the slider
+    const imageCount = $('.slider img').length;
+    const totalWidth = 100 * imageCount; // Total width in percentage
+    $('.slider').css('width', totalWidth + '%');
+});
+
+
     </script>
 
 </body>

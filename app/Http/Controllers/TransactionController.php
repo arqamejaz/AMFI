@@ -46,4 +46,12 @@ class TransactionController extends Controller
             'transactions' => $user->transactions
         ]);
     }
+    public function getProgress()
+    {
+        $totalTransactions = Transaction::count();
+        return response()->json([
+            'success' => true,
+            'total_transactions' => $totalTransactions,
+        ]);
+    }
 }

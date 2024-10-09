@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createThirdwebClient, defineChain } from "thirdweb";
 import { ThirdwebProvider, ConnectButton, ConnectEmbed , darkTheme, useNetworkSwitcherModal } from "thirdweb/react";
 // import { sepolia, lineaSepolia  } from "thirdweb/chains"
@@ -18,7 +18,7 @@ const client = createThirdwebClient({
 
 // List of wallets you want to support
 const wallets = [
-    inAppWallet(),
+    // inAppWallet(),
     createWallet("io.metamask"), // MetaMask
     createWallet("com.trustwallet.app"),
     createWallet("me.rainbow"), // Rainbow Wallet
@@ -31,7 +31,7 @@ const getLiveRates = async (currency) => {
     try {
         const response = await fetch(`/api/crypto-price/${currency}`);
         const data = await response.json();
-        console.log(data.data[currency].quote.USD.price);
+        console.log("data",data.data[currency].quote.USD.price);
         return data.data[currency].quote.USD.price; // Extract price from the response
     } catch (error) {
         console.error("Error fetching live rates:", error);
@@ -100,8 +100,8 @@ export function WalletConnection() {
         else{
             setLoading(true);
             const liveRate = await getLiveRates(selectedCurrency); // Fetch live rate for the selected currency
-            amount = (0.5/liveRate); // Multiply by 250 (your fixed amount)
-            // amount = (0.00001)
+            // amount = (0.5/liveRate); // Multiply by 250 (your fixed amount)
+            amount = (0.000001)
             setTransactionAmount(amount);
             setLoading(false);
         }
@@ -189,6 +189,28 @@ export function WalletConnection() {
         }
     };
 
+
+        const [progressValue, setProgressValue] = useState(0);
+        const maxValue = 2331; // You can also fetch this from the database if needed
+
+        useEffect(() => {
+        const fetchProgressValue = async () => {
+            try {
+            const response = await fetch('/api/progressbar'); // Replace with your API endpoint
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json(); // Assuming the response is in JSON format
+            setProgressValue(data.total_transactions); // Set the value from the response
+            } catch (error) {
+            console.error('Error fetching progress value:', error);
+            }
+        };
+
+        fetchProgressValue();
+        }, []);
+        console.log("progess value",progressValue);
+
     return (
         <MetaMaskProvider
       debug={true}
@@ -198,7 +220,6 @@ export function WalletConnection() {
           url: window.location.href,
         },
         infuraAPIKey: "223131ba87834950b982135c0e236c26",
-        // Other options.
       }}
     >
         <ThirdwebProvider >
@@ -222,10 +243,10 @@ export function WalletConnection() {
                             <div
                                 className="pro-bar"
                                 role="progressbar"
-                                style={{ width: '10%' }}
-                                aria-valuenow="0"
+                                style={{ width: `${(progressValue / maxValue) * 100}%` }}
+                                aria-valuenow={progressValue}
                                 aria-valuemin="0"
-                                aria-valuemax="2331"
+                                aria-valuemax={maxValue}
                             >
                             </div>
                         </div>

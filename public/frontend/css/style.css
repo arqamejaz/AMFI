@@ -189,9 +189,9 @@ ol {
     border: 3px;
     border-style: solid;
     border-color: transparent;
-    border-top-color: rgba(255, 255, 255, 0.5);
-    -webkit-animation: dreamrotate 2400ms linear infinite;
-    animation: dreamrotate 2400ms linear infinite;
+    /* border-top-color: rgba(255, 255, 255, 0.5); */
+    /* -webkit-animation: dreamrotate 2400ms linear infinite; */
+    /* animation: dreamrotate 2400ms linear infinite; */
     z-index: 999;
 }
 
@@ -343,7 +343,7 @@ ol {
 }
 
 .mt-100 {
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .mt-150 {
@@ -4365,3 +4365,32 @@ dt {
     visibility: visible;
     opacity: 1;
 }
+
+
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    background: #213BA9;
+    /* border: 2px solid #ccc; */
+  }
+
+  .slider {
+    display: flex;
+    width: 100%;
+    animation: slide 5s linear infinite;
+}
+
+  .slider img, h5 {
+    width: 150px;
+
+    margin: 0 10px;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(-5%);
+    }
+  }
